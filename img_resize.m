@@ -1,3 +1,7 @@
+% you can change the images with this code part
+% Mesut GUVEN
+
+
 HEALTHY= imread('HEALTHY.png');
 
 healthy_img_R = HEALTHY(:,:,1);
