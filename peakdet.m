@@ -1,44 +1,5 @@
 function [pks,dep,pid,did] = peakdet(sig, th, type, mdist)
-%PEAKDET  Detect Peaks and Depressions in a signal
-%   returns peaks and depressions (local maxima and minimum) in the input signal.
-%   It can detect peaks/dep crossing the threshold or zero.
-%   Signal data requires a row or column vector with real-valued elements.
-%   If there are no local minimum/maxima returns empty.
-%
-% Syntax:
-%   [pks,dep,pidx,didx] = peakdet(sig, th, type, mdist)
-%
-% Inputs:
-%   sig - Signal column vector
-%    th - threshold scalar absolute value
-%  type - Detection crossing 'threshold', 'th' or 'zero'
-% mdist - minimum distance between any two peaks (local maximum)
-%
-% Outputs:
-%  pks - peaks values that are greater than th
-%  dep - depressions values that are less than th
-%  pid - peaks indices
-%  did - depressions indices
-%
-% Example:
-%   t = [0:.01:1]';                     % time vector
-%   s = -sin(2*pi*5*t);                 % signal vector
-%   s = s + .4*randn(length(s),1);      % add noise
-%   th = 0.5;                           % choose th
-%   [pks,dep,pidx,didx] = peakdet(s,th);% perform peak-dep detection
-%   plot(t,s,'k'); hold on;             % plot signal
-%   stem(t(pidx),pks,'g')               % plot peaks
-%   stem(t(didx),dep,'r')               % plot depressions
-%   line([t(1) t(end)],[th th], ...     % plot thresholds
-%       'LineStyle','--','color','m');
-%   line([t(1) t(end)],[-th -th],'LineStyle','--','color','m');
-%
-% Other m-files required: none
-% Subfunctions: none
-% MAT-files required: none
-%
-% See also: crossdet;
-%------------------------------- BEGIN CODE -------------------------------
+
 pks = [];
 dep = [];
 pid = [];
